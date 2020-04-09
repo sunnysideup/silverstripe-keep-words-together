@@ -17,19 +17,16 @@ class DBStringExtension extends Extension
 
     public function KeepWordsTogether(?string $words = '')
     {
-        die('aasdf');
-        return 'xxxx';
         $text = $this->owner->getValue();
         $replacers = WordsToKeepTogether::get();
         if($words) {
-            $text = $this->replaceKeepWordsTogether($words);
+            $text = $this->replaceKeepWordsTogether($text, $words);
         }
         foreach($replacers as $replacer) {
-            $text = $this->replaceKeepWordsTogether($text = $replacer->Title);
+            $text = $this->replaceKeepWordsTogether($text, $replacer->Title);
         }
-        $text = 'HELLOOOOO';
         $field = DBField::create_field(DBHTMLText::class, $text);
-        if($fields instanceof DBHTMLText) {
+        if($field instanceof DBHTMLText) {
             $field->setProcessShortcodes(true);
         }
 
@@ -38,9 +35,9 @@ class DBStringExtension extends Extension
 
     protected function replaceKeepWordsTogether(string $text, string $words)
     {
-        if (stripos($words, $text) !== false) {
+        if (stripos($text, $words) !== false) {
             $newString = self::SPAN_START . $words . self::SPAN_END;
-            $text = str_replace($words, $newSting, $text);
+            $text = str_ireplace($words, $newString, $text);
         }
 
         return $text;

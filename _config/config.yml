@@ -2,5 +2,5 @@
 Name: KeepWordsTogether
 ---
 SilverStripe\ORM\FieldType\DBString:
-  extension:
+  extensions:
     - Sunnysideup\KeepWordsTogether\DBStringExtension
