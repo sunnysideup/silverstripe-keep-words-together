@@ -1,6 +1,6 @@
 {
     "name": "sunnysideup/keep-words-together",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "description": "Avoid orphaned words",
     "keywords": [
         "Silverstripe-CMS",
