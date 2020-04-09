@@ -2,15 +2,12 @@
 
 namespace Sunnysideup\KeepWordsTogether;
 
-use SilverStripe\Control\Director;
-
 use SilverStripe\Core\Extension;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 
 class DBStringExtension extends Extension
 {
-
     private const SPAN_START = '<span class="keep-together">';
 
     private const SPAN_END = '</span>';
@@ -19,14 +16,14 @@ class DBStringExtension extends Extension
     {
         $text = $this->owner->getValue();
         $replacers = WordsToKeepTogether::get();
-        if($words) {
+        if ($words) {
             $text = $this->replaceKeepWordsTogether($text, $words);
         }
-        foreach($replacers as $replacer) {
+        foreach ($replacers as $replacer) {
             $text = $this->replaceKeepWordsTogether($text, $replacer->Title);
         }
         $field = DBField::create_field(DBHTMLText::class, $text);
-        if($field instanceof DBHTMLText) {
+        if ($field instanceof DBHTMLText) {
             $field->setProcessShortcodes(true);
         }
 
@@ -41,7 +38,5 @@ class DBStringExtension extends Extension
         }
 
         return $text;
-
     }
-
 }

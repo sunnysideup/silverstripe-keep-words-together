@@ -3,11 +3,9 @@
 namespace Sunnysideup\KeepWordsTogether;
 
 use SilverStripe\Admin\ModelAdmin;
-use SilverStripe\Forms\GridField\GridField;
 
 class WordsToKeepTogetherModelAdmin extends ModelAdmin
 {
-
     private static $menu_title = 'Words Together';
 
     private static $url_segment = 'words-to-keep-together';
@@ -17,5 +15,4 @@ class WordsToKeepTogetherModelAdmin extends ModelAdmin
     private static $managed_models = [
         WordsToKeepTogether::class,
     ];
-
 }
