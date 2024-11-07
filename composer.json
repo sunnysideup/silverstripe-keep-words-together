@@ -1,7 +1,7 @@
 {
     "name": "sunnysideup/keep-words-together",
     "type": "silverstripe-vendormodule",
-    "description": "Avoid orphaned words",
+    "description": "Avoid orphaned words (last word in a text block on the next page). ",
     "keywords": [
         "Silverstripe-CMS",
         "CMS",
