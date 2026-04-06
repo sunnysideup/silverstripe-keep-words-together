@@ -1,29 +1,29 @@
 {
-    "name": "sunnysideup/keep-words-together",
-    "type": "silverstripe-vendormodule",
-    "description": "Avoid orphaned words (last word in a text block on the next page). ",
-    "keywords": [
-        "Silverstripe-CMS",
-        "CMS",
-        "Silverstripe",
-        "Words",
-        "Orphan",
-        "Orphaned Words"
-    ],
-    "license": "BSD-3-Clause",
-    "authors": [
-        {
-            "name": "Nicolaas Francken",
-            "email": "modules@sunnysideup.co.nz",
-            "role": "lead developer"
-        }
-    ],
-    "require": {
-        "silverstripe/framework": "^4.0 || ^5.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Sunnysideup\\KeepWordsTogether\\": "src/"
-        }
+  "name": "sunnysideup/keep-words-together",
+  "type": "silverstripe-vendormodule",
+  "description": "Avoid orphaned words (last word in a text block on the next page). ",
+  "keywords": [
+    "Silverstripe-CMS",
+    "CMS",
+    "Silverstripe",
+    "Words",
+    "Orphan",
+    "Orphaned Words"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Nicolaas Francken",
+      "email": "modules@sunnysideup.co.nz",
+      "role": "lead developer"
     }
+  ],
+  "require": {
+    "silverstripe/framework": "^4.0 || ^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sunnysideup\\KeepWordsTogether\\": "src/"
+    }
+  }
 }
